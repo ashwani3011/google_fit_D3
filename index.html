@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <style>
+    * {
+      margin: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      background-color: rgb(230, 230, 230);
+    }
+
+    .top-details {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .summary-details {
+      margin-left: 20px;
+      min-width: 200px;
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 30px;
+      margin-top: 30px;
+      color: blue;
+    }
+    .summary-details div {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .summary-details div p:nth-child(2) {
+      font-weight: 550;
+      color: black;
+      font-size: smaller;
+    }
+    .summary-details div p:nth-child(1) {
+      font-weight: 540;
+      font-size: large;
+    }
+
+    .legend {
+      min-width: 300px;
+      display: flex;
+      justify-content: space-around;
+      font-size: 15;
+      font-weight: 600;
+    }
+    .legend1,
+    .legend2 {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .legend img {
+      padding: 5%;
+    }
+    .legend p {
+      min-width: fit-content;
+    }
+  </style>
+
+  <body>
+    <div class="container">
+      <div class="top-details">
+        <div class="wheels">
+          <div class="c"></div>
+        </div>
+        <div class="legend">
+          <div class="legend1">
+            <img src="./img/heart.png" alt="heart" />
+            <p>Heart Pts</p>
+          </div>
+
+          <div class="legend2">
+            <img src="./img/shoe.png" alt="shoe" />
+            <p>Steps</p>
+          </div>
+        </div>
+
+        <div class="summary-details">
+          <div class="calories">
+            <p>0</p>
+            <p>Cal</p>
+          </div>
+          <div class="distance">
+            <p>0</p>
+            <p>km</p>
+          </div>
+          <div class="move-min">
+            <p>0</p>
+            <p>Mov Min</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://d3js.org/d3.v7.min.js" defer></script>
+    <script src="./scripts/wheels.js" defer></script>
+    <script src="./scripts/counters.js" defer></script>
+    <script src="./scripts/stats.js" defer></script>
+  </body>
+</html>
